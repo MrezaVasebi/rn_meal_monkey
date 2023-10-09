@@ -17,6 +17,8 @@ export function handleIcons(iconName: string) {
     setting: require("../assets/icons/setting.png"),
     start: require("../assets/icons/start.png"),
     user: require("../assets/icons/user.png"),
+    back: require("../assets/icons/back.png"),
+    splash: require("../assets/icons/splash.png"),
   };
 
   return iconList[iconName as keyof typeof iconList];

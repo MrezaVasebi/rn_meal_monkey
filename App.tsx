@@ -1,14 +1,10 @@
-import { StyleSheet, View } from "react-native";
+import RootScreen from "./components/RootScreen";
+import { Splash } from "./screens";
 
 export default function App() {
-  return <View style={styles.container}></View>;
+  return (
+    <RootScreen>
+      <Splash />
+    </RootScreen>
+  );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});

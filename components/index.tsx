@@ -1,3 +1,5 @@
+import RootScreen from "./RootScreen";
 import WrapIcon from "./WrapIcon";
 
-export { WrapIcon };
+export { RootScreen, WrapIcon };
+

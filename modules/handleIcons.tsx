@@ -1,6 +1,6 @@
-export function handleIcons(iconName: string): string {
+export function handleIcons(iconName: string) {
   let iconList = {
-    card: "",
+    logo: require("../assets/icons/logo.png"),
   };
 
   return iconList[iconName as keyof typeof iconList];

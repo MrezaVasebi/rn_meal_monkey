@@ -15,6 +15,7 @@ interface IButtonWithIcon {
   btnStyle?: object;
 
   iconName: string;
+  tintColor?: string;
   width: DimensionValue;
   height: DimensionValue;
 }
@@ -35,9 +36,10 @@ const ButtonWithIcon = (props: TouchableOpacityProps & IButtonWithIcon) => {
       />
 
       <WrapIcon
-        myWidth={props.width}
-        myHeight={props.height}
+        width={props.width}
+        height={props.height}
         iconName={props.iconName}
+        tintColor={props.tintColor}
       />
     </AppButton>
   );

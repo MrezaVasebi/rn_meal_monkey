@@ -1,21 +1,24 @@
-import React from "react";
 import { DimensionValue, Image } from "react-native";
 import { handleIcons } from "../modules/handleIcons";
 
 interface IWrapIcon {
   iconName: string;
-  myWidth: DimensionValue;
-  myHeight: DimensionValue;
+  tintColor?: string;
+  width?: DimensionValue;
+  height?: DimensionValue;
 }
 
 const WrapIcon = (props: IWrapIcon) => {
+  let { iconName, height = 25, width = 25, tintColor } = props;
+
   return (
     <Image
-      source={require(handleIcons(props.iconName))}
+      tintColor={tintColor}
+      source={handleIcons(iconName)}
       style={{
-        width: props.myWidth,
+        width,
+        height,
         resizeMode: "contain",
-        height: props.myHeight,
       }}
     />
   );

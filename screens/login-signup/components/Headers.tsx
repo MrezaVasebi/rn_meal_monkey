@@ -22,6 +22,8 @@ export default Headers;
 const styles = StyleSheet.create({
   lblSubtitleStyle: {
     marginTop: 16,
+    lineHeight: 20,
     marginBottom: 36,
+    textAlign: "center",
   },
 });

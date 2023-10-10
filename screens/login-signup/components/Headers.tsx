@@ -10,7 +10,7 @@ interface IHeader {
 const Headers = (props: IHeader) => {
   return (
     <>
-      <AppText lblStyle={{ fontSize: 30 }} label={props.title} />
+      <AppText lblStyle={styles.lblTitleStyle} label={props.title} />
 
       <AppText label={props.subTitle} lblStyle={styles.lblSubtitleStyle} />
     </>
@@ -20,6 +20,10 @@ const Headers = (props: IHeader) => {
 export default Headers;
 
 const styles = StyleSheet.create({
+  lblTitleStyle: {
+    fontSize: 30,
+    textAlign: "center",
+  },
   lblSubtitleStyle: {
     marginTop: 16,
     lineHeight: 20,

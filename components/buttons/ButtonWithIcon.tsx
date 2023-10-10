@@ -4,6 +4,7 @@ import {
   StyleSheet,
   TouchableOpacityProps,
 } from "react-native";
+import { appColors } from "../../utils";
 import WrapIcon from "../WrapIcon";
 import { AppText } from "../texts";
 import AppButton from "./AppButton";
@@ -16,17 +17,17 @@ interface IButtonWithIcon {
 
   iconName: string;
   tintColor?: string;
-  width: DimensionValue;
-  height: DimensionValue;
+  width?: DimensionValue;
+  height?: DimensionValue;
 }
 
 const ButtonWithIcon = (props: TouchableOpacityProps & IButtonWithIcon) => {
   return (
     <AppButton
       onPress={props.onPress}
-      style={{
-        ...styles.btnStyle,
+      btnStyle={{
         backgroundColor: props.bgColor,
+        ...styles.btnStyle,
         ...props.btnStyle,
       }}
     >
@@ -48,6 +49,14 @@ const ButtonWithIcon = (props: TouchableOpacityProps & IButtonWithIcon) => {
 export default ButtonWithIcon;
 
 const styles = StyleSheet.create({
-  btnStyle: {},
-  lblStyle: {},
+  btnStyle: {
+    borderWidth: 0,
+    alignItems: "center",
+    justifyContent: "center",
+    flexDirection: "row-reverse",
+  },
+  lblStyle: {
+    marginLeft: 10,
+    color: appColors.white,
+  },
 });

@@ -1,3 +1,4 @@
+import Login from "./Login";
 import LoginOrSignup from "./LoginOrSignup";
 
-export { LoginOrSignup };
+export { Login, LoginOrSignup };

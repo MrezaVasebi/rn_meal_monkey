@@ -20,7 +20,7 @@ const Login = () => {
         <AppInput placeholder="Your Email" />
         <AppInput placeholder="Password" inputStyle={{ marginVertical: 26 }} />
 
-        <FillButton label="Login" btnStyle={styles.loginStyle} />
+        <FillButton label="Login" btnStyle={styles.btnLoginStyle} />
 
         <TextButton
           label="Forgot your password?"
@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
   root: {
     alignItems: "center",
   },
-  loginStyle: {
+  btnLoginStyle: {
     borderWidth: 0,
     marginBottom: 24,
     backgroundColor: appColors.orange,

@@ -6,12 +6,16 @@ import {
 } from "react-native";
 import { AppRadius } from "../../utils";
 
-const AppButton = (props: TouchableOpacityProps) => {
+interface IAppButton {
+  btnStyle?: object;
+}
+
+const AppButton = (props: TouchableOpacityProps & IAppButton) => {
   return (
     <TouchableOpacity
-      onPress={props.onPress}
       activeOpacity={0.5}
-      style={{ ...styles.btnStyle }}
+      onPress={props.onPress}
+      style={{ ...styles.btnStyle, ...props.btnStyle }}
     >
       {props.children}
     </TouchableOpacity>

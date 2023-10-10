@@ -6,28 +6,18 @@ import AppButton from "./AppButton";
 
 interface IFillButton {
   label: string;
-  bgColor?: string;
   lblStyle?: object;
   btnStyle?: object;
-  borderColor?: string;
 }
 
 const FillButton = (props: TouchableOpacityProps & IFillButton) => {
-  let {
-    label,
-    lblStyle,
-    btnStyle,
-    bgColor = appColors.orange,
-    borderColor = appColors.orange,
-  } = props;
+  let { label, lblStyle, btnStyle } = props;
 
   return (
     <AppButton
       onPress={props.onPress}
-      style={{
+      btnStyle={{
         ...styles.btnStyle,
-        backgroundColor: bgColor,
-        borderColor: borderColor,
         ...btnStyle,
       }}
     >

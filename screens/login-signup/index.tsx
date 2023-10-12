@@ -4,5 +4,14 @@ import NewPassword from "./NewPassword";
 import OtpCode from "./OtpCode";
 import ResetPassword from "./ResetPassword";
 import SignUp from "./SignUp";
+import SwapList from "./SwapList";
 
-export { Login, LoginOrSignup, NewPassword, OtpCode, ResetPassword, SignUp };
+export {
+  Login,
+  LoginOrSignup,
+  NewPassword,
+  OtpCode,
+  ResetPassword,
+  SignUp,
+  SwapList,
+};

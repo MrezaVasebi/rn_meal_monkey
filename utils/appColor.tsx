@@ -8,6 +8,7 @@ export const appColors = {
   white: "#FFFF",
   placeholder: "#B6B7B7",
   fillInput: "#F2F2F2",
+  darkPlus: "#4A4B4D",
 
   borderColor: {
     orange: "#FC6011",

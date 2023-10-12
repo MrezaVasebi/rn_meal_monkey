@@ -1,3 +1,5 @@
+import { SwapList } from "./screens/login-signup";
+
 export default function App() {
-  return null;
+  return <SwapList />;
 }

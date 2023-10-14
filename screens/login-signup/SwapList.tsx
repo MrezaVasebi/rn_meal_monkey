@@ -5,6 +5,8 @@ import { FillButton } from "../../components/buttons";
 import { AppText } from "../../components/texts";
 import { AppPadding, appColors } from "../../utils";
 
+let { width } = Dimensions.get("window");
+
 const SwapList = () => {
   let scrollRef: React.MutableRefObject<null> = useRef(null);
 
@@ -29,18 +31,14 @@ const SwapList = () => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 
   function handleScroll(event: any) {
-    setCurrentIndex(
-      Math.round(
-        event.nativeEvent.contentOffset.x / Dimensions.get("window").width
-      )
-    );
+    setCurrentIndex(Math.round(event.nativeEvent.contentOffset.x / width));
   }
 
   function handleOnPressNext() {
     if (currentIndex === data.length - 1) return;
 
     scrollRef?.current?.scrollTo({
-      x: Dimensions.get("window").width * (currentIndex + 1),
+      x: width * (currentIndex + 1),
       animated: true,
     });
 
@@ -109,10 +107,10 @@ const styles = StyleSheet.create({
     padding: 0,
   },
   itemStyle: {
+    width: width,
     marginTop: 100,
     alignItems: "center",
     padding: AppPadding.xl,
-    width: Dimensions.get("window").width,
   },
   lblTitleStyle: {
     fontSize: 28,

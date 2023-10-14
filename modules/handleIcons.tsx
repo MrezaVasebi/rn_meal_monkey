@@ -1,5 +1,6 @@
 export function handleIcons(iconName: string) {
   let iconList = {
+    // icons
     logo: require("../assets/icons/logo.png"),
     bag: require("../assets/icons/bag.png"),
     cart: require("../assets/icons/cart.png"),
@@ -24,6 +25,11 @@ export function handleIcons(iconName: string) {
     slideOne: require("../assets/icons/slide_one.png"),
     slideTwo: require("../assets/icons/slide_two.png"),
     slideThree: require("../assets/icons/slide_three.png"),
+
+    // img
+    food_one: require("../assets/img/food_one.png"),
+    food_two: require("../assets/img/food_two.png"),
+    food_three: require("../assets/img/food_three.png"),
   };
 
   return iconList[iconName as keyof typeof iconList];

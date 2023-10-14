@@ -1,5 +1,5 @@
-import { SwapList } from "./screens/login-signup";
+import { Home } from "./screens/bottom-tab/home";
 
 export default function App() {
-  return <SwapList />;
+  return <Home />;
 }

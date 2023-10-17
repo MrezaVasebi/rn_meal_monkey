@@ -5,7 +5,7 @@ import AppInput from "../../../components/inputs/AppInput";
 import { AppText } from "../../../components/texts";
 import { menu_item } from "../../../constant/menu_item";
 import { appColors } from "../../../utils";
-import MenuItem from "./components/MenuItem";
+import { MenuItem } from "./components";
 
 const Menu = () => {
   return (
@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
   },
   inputContaineR: {
     marginTop: 24,
-    marginBottom: 60,
+    marginBottom: 19,
     alignItems: "center",
   },
   container: {

@@ -1,5 +1,5 @@
-import { Menu } from "./screens/bottom-tab/menu";
+import { Deserts } from "./screens/bottom-tab/menu";
 
 export default function App() {
-  return <Menu />;
+  return <Deserts />;
 }

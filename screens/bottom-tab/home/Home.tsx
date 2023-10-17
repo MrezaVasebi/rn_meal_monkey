@@ -30,7 +30,7 @@ const Home = () => {
           </TouchableOpacity>
         </View>
 
-        <View style={{ marginVertical: 21, paddingLeft: 21 }}>
+        <View style={{ marginVertical: 34, paddingLeft: 21 }}>
           <AppText label="Delivering to" lblStyle={{ fontSize: 11 }} />
 
           <View style={{ flexDirection: "row", alignItems: "center" }}>
@@ -53,7 +53,7 @@ const Home = () => {
         <AppInput
           isUsedWidth={true}
           placeholder="Search food"
-          inputStyle={{ marginVertical: 30, marginHorizontal: 21 }}
+          inputStyle={styles.inputStyle}
         />
 
         <ScrollView
@@ -111,7 +111,7 @@ const styles = StyleSheet.create({
   categoryStyle: {
     marginTop: 30,
     paddingLeft: 21,
-    marginBottom: 60,
+    marginBottom: 58,
   },
   headerContainer: {
     marginTop: 20,
@@ -123,4 +123,5 @@ const styles = StyleSheet.create({
     fontSize: 20,
     color: appColors.darkPlus,
   },
+  inputStyle: { marginBottom: 19, marginHorizontal: 21 },
 });

@@ -1,18 +1,34 @@
 import React from "react";
-import { StyleSheet, TextInput, TextInputProps } from "react-native";
+import {
+  DimensionValue,
+  StyleSheet,
+  TextInput,
+  TextInputProps,
+} from "react-native";
 import { AppPadding, AppRadius, appColors } from "../../utils";
 
 interface IAppInput {
   inputStyle?: object;
+  isUsedWidth?: boolean;
+  width?: DimensionValue;
 }
 
 const AppInput = (props: TextInputProps & IAppInput) => {
+  let { isUsedWidth = false } = props;
+
+  let customStyle = {};
+  if (!isUsedWidth) {
+    customStyle = { width: 307 };
+  } else {
+    customStyle = { width: props.width };
+  }
+
   return (
     <TextInput
       placeholder={props.placeholder}
       onChangeText={props.onChangeText}
       placeholderTextColor={appColors.placeholder}
-      style={{ ...styles.style, ...props.inputStyle }}
+      style={{ ...styles.style, ...customStyle, ...props.inputStyle }}
     />
   );
 };
@@ -21,7 +37,6 @@ export default AppInput;
 
 const styles = StyleSheet.create({
   style: {
-    width: 307,
     height: 56,
     paddingLeft: AppPadding.l,
     borderRadius: AppRadius.xl,

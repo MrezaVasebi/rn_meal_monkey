@@ -1,5 +1,5 @@
-import { Home } from "./screens/bottom-tab/home";
+import { Menu } from "./screens/bottom-tab/menu";
 
 export default function App() {
-  return <Home />;
+  return <Menu />;
 }

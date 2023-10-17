@@ -51,8 +51,9 @@ const Home = () => {
         </View>
 
         <AppInput
+          isUsedWidth={true}
           placeholder="Search food"
-          inputStyle={{ marginVertical: 30, marginLeft: 21 }}
+          inputStyle={{ marginVertical: 30, marginHorizontal: 21 }}
         />
 
         <ScrollView

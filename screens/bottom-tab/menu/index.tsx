@@ -1,4 +1,5 @@
+import DesertDetails from "./DesertDetails";
 import Deserts from "./Deserts";
 import Menu from "./Menu";
 
-export { Deserts, Menu };
+export { DesertDetails, Deserts, Menu };

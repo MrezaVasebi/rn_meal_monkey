@@ -25,6 +25,7 @@ export function handleIcons(iconName: string) {
     slideOne: require("../assets/icons/slide_one.png"),
     slideTwo: require("../assets/icons/slide_two.png"),
     slideThree: require("../assets/icons/slide_three.png"),
+    heart: require("../assets/icons/heart.png"),
 
     // img
     food_one: require("../assets/img/food_one.png"),
@@ -33,6 +34,7 @@ export function handleIcons(iconName: string) {
     food_four: require("../assets/img/food_four.png"),
     food_five: require("../assets/img/food_five.png"),
     food_six: require("../assets/img/food_six.png"),
+    food_seven: require("../assets/img/food_seven.png"),
   };
 
   return iconList[iconName as keyof typeof iconList];

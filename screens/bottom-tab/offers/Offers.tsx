@@ -1,6 +1,6 @@
 import React from "react";
-import { ScrollView, StyleSheet, TouchableOpacity, View } from "react-native";
-import { RootScreen, WrapIcon } from "../../../components";
+import { ScrollView, StyleSheet, View } from "react-native";
+import { PageHeader, RootScreen } from "../../../components";
 import { AppButton } from "../../../components/buttons";
 import { AppText } from "../../../components/texts";
 import { popular_restaurant } from "../../../constant";
@@ -11,13 +11,7 @@ const Offers = () => {
   return (
     <RootScreen root={styles.root}>
       <View style={{ paddingHorizontal: 21 }}>
-        <View style={styles.headerContainer}>
-          <AppText label="Latest Offers" lblStyle={styles.lblTitle} />
-
-          <TouchableOpacity>
-            <WrapIcon iconName="cart" />
-          </TouchableOpacity>
-        </View>
+        <PageHeader label="Latest Offers" />
 
         <AppText
           label="Find discounts, Offers special

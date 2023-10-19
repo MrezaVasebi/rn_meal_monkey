@@ -1,6 +1,6 @@
 import React from "react";
 import { ScrollView, StyleSheet, TouchableOpacity, View } from "react-native";
-import { RootScreen, WrapIcon } from "../../../components";
+import { PageHeader, RootScreen, WrapIcon } from "../../../components";
 import AppInput from "../../../components/inputs/AppInput";
 import { AppText } from "../../../components/texts";
 import {
@@ -22,13 +22,10 @@ const Home = () => {
   return (
     <RootScreen root={styles.root}>
       <ScrollView showsVerticalScrollIndicator={false}>
-        <View style={styles.headerContainer}>
-          <AppText label="Good morning Mreza!" lblStyle={styles.lblTitle} />
-
-          <TouchableOpacity>
-            <WrapIcon iconName="cart" />
-          </TouchableOpacity>
-        </View>
+        <PageHeader
+          label="Good morning Mreza!"
+          rootStyle={{ marginHorizontal: 21 }}
+        />
 
         <View style={{ marginVertical: 34, paddingLeft: 21 }}>
           <AppText label="Delivering to" lblStyle={{ fontSize: 11 }} />

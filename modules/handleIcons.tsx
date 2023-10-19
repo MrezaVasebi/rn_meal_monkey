@@ -35,6 +35,7 @@ export function handleIcons(iconName: string) {
     food_five: require("../assets/img/food_five.png"),
     food_six: require("../assets/img/food_six.png"),
     food_seven: require("../assets/img/food_seven.png"),
+    profile: require("../assets/img/profile.png"),
   };
 
   return iconList[iconName as keyof typeof iconList];

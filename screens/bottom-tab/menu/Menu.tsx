@@ -1,8 +1,7 @@
 import React from "react";
-import { StyleSheet, TouchableOpacity, View } from "react-native";
-import { RootScreen, WrapIcon } from "../../../components";
+import { StyleSheet, View } from "react-native";
+import { PageHeader, RootScreen } from "../../../components";
 import AppInput from "../../../components/inputs/AppInput";
-import { AppText } from "../../../components/texts";
 import { menu_item } from "../../../constant/menu_item";
 import { appColors } from "../../../utils";
 import { MenuItem } from "./components";
@@ -10,13 +9,7 @@ import { MenuItem } from "./components";
 const Menu = () => {
   return (
     <RootScreen root={styles.root}>
-      <View style={styles.headerContainer}>
-        <AppText label="Menu" lblStyle={styles.lblTitle} />
-
-        <TouchableOpacity>
-          <WrapIcon iconName="cart" />
-        </TouchableOpacity>
-      </View>
+      <PageHeader label="Menu" rootStyle={{ marginHorizontal: 21 }} />
 
       <View style={styles.inputContaineR}>
         <AppInput placeholder="Search food" isUsedWidth={true} width={"93%"} />

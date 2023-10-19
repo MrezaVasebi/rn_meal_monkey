@@ -25,8 +25,10 @@ const AppInput = (props: TextInputProps & IAppInput) => {
 
   return (
     <TextInput
+      value={props.value}
       placeholder={props.placeholder}
       onChangeText={props.onChangeText}
+      secureTextEntry={props.secureTextEntry}
       placeholderTextColor={appColors.placeholder}
       style={{ ...styles.style, ...customStyle, ...props.inputStyle }}
     />

@@ -1,6 +1,6 @@
 import React from "react";
 import { SafeAreaView, StatusBar, StyleSheet } from "react-native";
-import { AppRadius, appColors } from "../utils";
+import { AppPadding, appColors } from "../utils";
 
 interface IRootScree {
   root?: object;
@@ -26,7 +26,7 @@ export default RootScreen;
 const styles = StyleSheet.create({
   root: {
     flex: 1,
-    padding: AppRadius.l,
+    padding: AppPadding.l,
     backgroundColor: appColors.white,
   },
 });

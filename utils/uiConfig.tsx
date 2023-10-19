@@ -15,6 +15,6 @@ export const AppRadius: UI = {
 export const AppPadding: UI = {
   s: 8,
   m: 13,
-  l: 18,
+  l: 21,
   xl: 23,
 };

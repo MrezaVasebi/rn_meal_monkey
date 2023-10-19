@@ -45,15 +45,6 @@ const styles = StyleSheet.create({
   root: {
     padding: 0,
   },
-  headerContainer: {
-    marginTop: 20,
-    flexDirection: "row",
-    justifyContent: "space-between",
-  },
-  lblTitle: {
-    fontSize: 20,
-    color: appColors.darkPlus,
-  },
   btnCheckOffers: {
     width: 157,
     marginLeft: 21,

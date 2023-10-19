@@ -1,3 +1,4 @@
 import More from "./More";
+import PaymentDetails from "./PaymentDetails";
 
-export { More };
+export { More, PaymentDetails };

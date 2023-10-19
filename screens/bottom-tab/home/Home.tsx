@@ -110,15 +110,5 @@ const styles = StyleSheet.create({
     paddingLeft: 21,
     marginBottom: 58,
   },
-  headerContainer: {
-    marginTop: 20,
-    flexDirection: "row",
-    paddingHorizontal: 21,
-    justifyContent: "space-between",
-  },
-  lblTitle: {
-    fontSize: 20,
-    color: appColors.darkPlus,
-  },
   inputStyle: { marginBottom: 19, marginHorizontal: 21 },
 });

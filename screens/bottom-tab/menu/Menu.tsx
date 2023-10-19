@@ -40,16 +40,6 @@ const styles = StyleSheet.create({
   root: {
     padding: 0,
   },
-  headerContainer: {
-    marginTop: 20,
-    flexDirection: "row",
-    paddingHorizontal: 21,
-    justifyContent: "space-between",
-  },
-  lblTitle: {
-    fontSize: 20,
-    color: appColors.darkPlus,
-  },
   inputContaineR: {
     marginTop: 24,
     marginBottom: 19,

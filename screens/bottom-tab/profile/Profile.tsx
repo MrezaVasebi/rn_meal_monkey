@@ -26,22 +26,11 @@ const Profile = () => {
           justifyContent: "center",
         }}
       >
-        <View
-          style={{
-            width: 102,
-            height: 102,
-            borderRadius: 51,
-          }}
-        >
+        <View style={styles.avatarStyle}>
           <WrapIcon iconName="profile" height={"100%"} width={"100%"} />
         </View>
 
-        <View
-          style={{
-            marginVertical: 18,
-            flexDirection: "row-reverse",
-          }}
-        >
+        <View style={styles.editContainer}>
           <TextButton
             label="Edit Profile"
             lblStyle={{ color: appColors.orange, marginLeft: 10 }}
@@ -87,14 +76,14 @@ export default Profile;
 
 const styles = StyleSheet.create({
   root: {},
-  headerContainer: {
-    marginTop: 20,
-    flexDirection: "row",
-    justifyContent: "space-between",
+  avatarStyle: {
+    width: 102,
+    height: 102,
+    borderRadius: 51,
   },
-  lblTitle: {
-    fontSize: 20,
-    color: appColors.darkPlus,
+  editContainer: {
+    marginVertical: 18,
+    flexDirection: "row-reverse",
   },
   btnSave: {
     width: "100%",

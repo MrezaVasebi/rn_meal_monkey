@@ -2,7 +2,7 @@ export const appColors = {
   grey: "#F2F2F2",
   orange: "#FC6011",
   blue: "#367FC0",
-  red: "#DD4B39",
+  red: "#FF1717",
   iconGrey: "#B6B7B7",
   darkGrey: "#7C7D7E",
   white: "#FFFF",
@@ -13,6 +13,6 @@ export const appColors = {
   borderColor: {
     orange: "#FC6011",
     blue: "#367FC0",
-    red: "#DD4B39",
+    red: "#FF1717",
   },
 };

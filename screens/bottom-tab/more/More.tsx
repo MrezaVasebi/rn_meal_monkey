@@ -23,7 +23,7 @@ const More = () => {
       >
         {data.map((el, index) => {
           return (
-            <View style={styles.itemStyle}>
+            <View key={index} style={styles.itemStyle}>
               <View style={{ flexDirection: "row", alignItems: "center" }}>
                 <View style={styles.circle}>
                   <WrapIcon

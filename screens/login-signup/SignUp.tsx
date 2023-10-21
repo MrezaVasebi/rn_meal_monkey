@@ -9,28 +9,26 @@ import { Headers } from "./components";
 
 const SignUp = () => {
   return (
-    <RootScreen root={styles.root}>
-      <View style={{ flex: 1, alignItems: "center" }}>
-        <Headers title="Sign Up" subTitle="Add your details to sign up" />
-        {[
-          "Name",
-          "Email",
-          "Mobile No",
-          "Address",
-          "Password",
-          "Confirm Password",
-        ].map((el) => {
-          return (
-            <AppInput
-              key={el}
-              placeholder={el}
-              inputStyle={{ marginBottom: 28 }}
-            />
-          );
-        })}
+    <RootScreen scrollStyle={styles.scrollStyle}>
+      <Headers title="Sign Up" subTitle="Add your details to sign up" />
+      {[
+        "Name",
+        "Email",
+        "Mobile No",
+        "Address",
+        "Password",
+        "Confirm Password",
+      ].map((el) => {
+        return (
+          <AppInput
+            key={el}
+            placeholder={el}
+            inputStyle={{ marginBottom: 28 }}
+          />
+        );
+      })}
 
-        <FillButton label="SignUp" btnStyle={styles.signupStyle} />
-      </View>
+      <FillButton label="SignUp" btnStyle={styles.signupStyle} />
 
       <View style={styles.loginStyle}>
         <AppText label="Already have an Account? " />
@@ -44,7 +42,7 @@ const SignUp = () => {
 export default SignUp;
 
 const styles = StyleSheet.create({
-  root: {
+  scrollStyle: {
     alignItems: "center",
   },
   signupStyle: {

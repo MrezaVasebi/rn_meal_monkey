@@ -46,7 +46,7 @@ const SwapList = () => {
   }
 
   return (
-    <RootScreen root={styles.root}>
+    <RootScreen scrollStyle={styles.root}>
       <View>
         <ScrollView
           horizontal
@@ -103,8 +103,8 @@ export default SwapList;
 
 const styles = StyleSheet.create({
   root: {
-    flex: 1,
     padding: 0,
+    paddingBottom: 10,
   },
   itemStyle: {
     width: width,

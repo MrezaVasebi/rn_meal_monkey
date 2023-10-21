@@ -26,7 +26,7 @@ export default PageHeader;
 
 const styles = StyleSheet.create({
   headerContainer: {
-    paddingBottom: 10,
+    paddingVertical: 10,
     flexDirection: "row",
     justifyContent: "space-between",
   },

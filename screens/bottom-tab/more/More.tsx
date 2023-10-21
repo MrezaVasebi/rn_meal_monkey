@@ -1,5 +1,5 @@
 import React from "react";
-import { ScrollView, StyleSheet, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { PageHeader, RootScreen, WrapIcon } from "../../../components";
 import { AppText } from "../../../components/texts";
 import { appColors } from "../../../utils";
@@ -14,13 +14,10 @@ const More = () => {
   ];
 
   return (
-    <RootScreen root={styles.root}>
+    <RootScreen>
       <PageHeader label="More" />
 
-      <ScrollView
-        showsVerticalScrollIndicator={false}
-        contentContainerStyle={{ flexGrow: 1, marginTop: 31 }}
-      >
+      <View style={{ marginTop: 31 }}>
         {data.map((el, index) => {
           return (
             <View key={index} style={styles.itemStyle}>
@@ -58,7 +55,7 @@ const More = () => {
             </View>
           );
         })}
-      </ScrollView>
+      </View>
     </RootScreen>
   );
 };
@@ -66,7 +63,6 @@ const More = () => {
 export default More;
 
 const styles = StyleSheet.create({
-  root: {},
   itemStyle: {
     height: 75,
     width: "94%",

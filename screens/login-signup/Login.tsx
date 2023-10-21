@@ -13,38 +13,36 @@ import { Headers } from "./components";
 
 const Login = () => {
   return (
-    <RootScreen root={styles.root}>
-      <View style={{ flex: 1, alignItems: "center" }}>
-        <Headers title="Login" subTitle="Add your details to login" />
+    <RootScreen scrollStyle={styles.scrollStyle}>
+      <Headers title="Login" subTitle="Add your details to login" />
 
-        <AppInput placeholder="Your Email" />
-        <AppInput placeholder="Password" inputStyle={{ marginVertical: 26 }} />
+      <AppInput placeholder="Your Email" />
+      <AppInput placeholder="Password" inputStyle={{ marginVertical: 26 }} />
 
-        <FillButton label="Login" btnStyle={styles.btnLoginStyle} />
+      <FillButton label="Login" btnStyle={styles.btnLoginStyle} />
 
-        <TextButton
-          label="Forgot your password?"
-          btnStyle={{ marginBottom: 49 }}
-        />
+      <TextButton
+        label="Forgot your password?"
+        btnStyle={{ marginBottom: 49 }}
+      />
 
-        <AppText label="or Login With" />
+      <AppText label="or Login With" />
 
-        <ButtonWithIcon
-          width={15}
-          height={15}
-          iconName="facebook"
-          label="Login with Facebook"
-          btnStyle={{ backgroundColor: appColors.blue, marginVertical: 26 }}
-        />
+      <ButtonWithIcon
+        width={15}
+        height={15}
+        iconName="facebook"
+        label="Login with Facebook"
+        btnStyle={{ backgroundColor: appColors.blue, marginVertical: 26 }}
+      />
 
-        <ButtonWithIcon
-          width={15}
-          height={15}
-          iconName="google"
-          label="Login with Google"
-          btnStyle={{ backgroundColor: appColors.red }}
-        />
-      </View>
+      <ButtonWithIcon
+        width={15}
+        height={15}
+        iconName="google"
+        label="Login with Google"
+        btnStyle={{ backgroundColor: appColors.red }}
+      />
 
       <View style={styles.signupStyle}>
         <AppText label="Don't have an Account? " />
@@ -58,7 +56,7 @@ const Login = () => {
 export default Login;
 
 const styles = StyleSheet.create({
-  root: {
+  scrollStyle: {
     alignItems: "center",
   },
   btnLoginStyle: {

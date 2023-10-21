@@ -7,7 +7,7 @@ import { appColors } from "../../../utils";
 
 const DesertDetails = () => {
   return (
-    <RootScreen root={styles.root}>
+    <RootScreen scrollStyle={styles.root}>
       <View style={styles.topContainer}>
         <WrapIcon iconName="food_three" height={250} width={"100%"} />
       </View>

@@ -8,7 +8,7 @@ import { MenuItem } from "./components";
 
 const Menu = () => {
   return (
-    <RootScreen root={styles.root}>
+    <RootScreen scrollStyle={styles.root}>
       <PageHeader label="Menu" rootStyle={{ marginHorizontal: 21 }} />
 
       <View style={styles.inputContaineR}>

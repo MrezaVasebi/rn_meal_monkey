@@ -4,9 +4,15 @@ import { appColors } from "../utils";
 import WrapIcon from "./WrapIcon";
 import { AppText } from "./texts";
 
-const PageHeaderWithReturn = ({ label }: { label: string }) => {
+const PageHeaderWithReturn = ({
+  label,
+  rootStyle,
+}: {
+  label: string;
+  rootStyle?: object;
+}) => {
   return (
-    <View style={styles.headerContainer}>
+    <View style={{ ...styles.headerContainer, ...rootStyle }}>
       <View style={styles.returnStyle}>
         <AppText label={label} lblStyle={styles.lblTitle} />
 
@@ -32,9 +38,8 @@ export default PageHeaderWithReturn;
 
 const styles = StyleSheet.create({
   headerContainer: {
-    marginTop: 20,
+    marginVertical: 10,
     flexDirection: "row",
-    paddingHorizontal: 21,
     justifyContent: "space-between",
   },
   lblTitle: {

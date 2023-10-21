@@ -11,8 +11,7 @@ const ResetPassword = () => {
     <RootScreen root={styles.root}>
       <Headers
         title="Reset Password"
-        subTitle="Please enter your email to receive a 
-link to  create a new password via email"
+        subTitle="Please enter your email to receive a link to  create a new password via email"
       />
 
       <AppInput placeholder="Email" />

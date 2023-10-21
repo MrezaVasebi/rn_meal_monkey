@@ -7,7 +7,7 @@ import { DesertItem } from "./components";
 
 const Deserts = () => {
   return (
-    <RootScreen root={styles.root}>
+    <RootScreen scrollStyle={styles.root}>
       <PageHeaderWithReturn label="Desserts" />
 
       <View style={styles.inputContaineR}>

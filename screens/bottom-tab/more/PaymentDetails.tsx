@@ -14,8 +14,11 @@ const PaymentDetails = () => {
   const [showModal, setShowModal] = useState<boolean>(false);
 
   return (
-    <RootScreen root={styles.root}>
-      <PageHeaderWithReturn label="Payment Details" />
+    <RootScreen scrollStyle={{ padding: 0 }}>
+      <PageHeaderWithReturn
+        label="Payment Details"
+        rootStyle={{ paddingHorizontal: 21 }}
+      />
 
       <View style={styles.containerStyle}>
         <AppText
@@ -97,15 +100,13 @@ const PaymentDetails = () => {
 export default PaymentDetails;
 
 const styles = StyleSheet.create({
-  root: { padding: 0 },
   containerStyle: {
+    paddingLeft: 21,
     marginTop: 28,
     marginBottom: 20,
-    // paddingHorizontal: 21,
   },
   lblDesc: {
     fontSize: 16,
-    paddingLeft: 21,
     fontWeight: "bold",
     color: appColors.darkPlus,
   },

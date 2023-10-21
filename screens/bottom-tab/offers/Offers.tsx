@@ -9,7 +9,7 @@ import { PopularRestaurantCart } from "../home/components";
 
 const Offers = () => {
   return (
-    <RootScreen root={styles.root}>
+    <RootScreen scrollStyle={styles.root}>
       <View style={{ paddingHorizontal: 21 }}>
         <PageHeader label="Latest Offers" />
 

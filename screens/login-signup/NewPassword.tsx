@@ -8,11 +8,10 @@ import { Headers } from "./components";
 
 const NewPassword = () => {
   return (
-    <RootScreen root={styles.root}>
+    <RootScreen scrollStyle={styles.root}>
       <Headers
         title="New Password"
-        subTitle="Please enter your email to receive a 
-link to  create a new password via email"
+        subTitle="Please enter your email to receive a link to  create a new password via email"
       />
 
       <AppInput placeholder="New Password" />

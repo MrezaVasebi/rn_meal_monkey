@@ -9,27 +9,23 @@ const LoginOrSignup = () => {
   let { width } = Dimensions.get("window");
 
   return (
-    <RootScreen root={styles.root}>
-      <View style={styles.top}>
-        <WrapIcon height={"100%"} width={width} iconName="back" />
-      </View>
+    <RootScreen scrollStyle={styles.scrollStyle}>
+      <WrapIcon width={width} iconName="back" height={350} />
 
-      <View style={styles.bottom}>
-        <View style={{ marginHorizontal: 50 }}>
-          <AppText
-            lblStyle={styles.lblDescStyle}
-            label="Discover the best foods from over 1,000 restaurants and fast delivery to your doorstep"
-          />
-        </View>
-
-        <FillButton label="Login" btnStyle={styles.btnStyle} />
-
-        <FillButton
-          label="Create an Account"
-          btnStyle={styles.createAccountStyle}
-          lblStyle={{ color: appColors.orange }}
+      <View style={{ marginHorizontal: 50 }}>
+        <AppText
+          lblStyle={styles.lblDescStyle}
+          label="Discover the best foods from over 1,000 restaurants and fast delivery to your doorstep"
         />
       </View>
+
+      <FillButton label="Login" btnStyle={styles.btnStyle} />
+
+      <FillButton
+        label="Create an Account"
+        btnStyle={styles.createAccountStyle}
+        lblStyle={{ color: appColors.orange }}
+      />
     </RootScreen>
   );
 };
@@ -37,21 +33,14 @@ const LoginOrSignup = () => {
 export default LoginOrSignup;
 
 const styles = StyleSheet.create({
-  root: {
-    padding: 0,
-  },
-  top: {
-    flex: 1.5,
+  scrollStyle: {
+    alignItems: "center",
   },
   lblDescStyle: {
     lineHeight: 20,
     marginVertical: 36,
     textAlign: "center",
     color: appColors.darkGrey,
-  },
-  bottom: {
-    flex: 1,
-    alignItems: "center",
   },
   btnStyle: {
     borderWidth: 0,

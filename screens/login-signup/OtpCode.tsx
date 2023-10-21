@@ -9,12 +9,10 @@ import { Headers } from "./components";
 
 const OtpCode = () => {
   return (
-    <RootScreen root={styles.root}>
+    <RootScreen>
       <Headers
-        title="We have sent an OTP to
-your Mobile"
-        subTitle="Please check your mobile number 071*****12 
-continue to reset your password"
+        title="We have sent an OTP to your Mobile"
+        subTitle="Please check your mobile number 071*****12 continue to reset your password"
       />
 
       <AppInput placeholder="OTP" />
@@ -33,9 +31,6 @@ continue to reset your password"
 export default OtpCode;
 
 const styles = StyleSheet.create({
-  root: {
-    alignItems: "center",
-  },
   btnNextStyle: {
     borderWidth: 0,
     marginTop: 24,
@@ -44,5 +39,6 @@ const styles = StyleSheet.create({
   clickHereStyle: {
     marginTop: 32,
     flexDirection: "row",
+    justifyContent: "center",
   },
 });

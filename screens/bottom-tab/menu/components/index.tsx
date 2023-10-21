@@ -1,4 +1,5 @@
 import DesertItem from "./DesertItem";
 import MenuItem from "./MenuItem";
+import NotificationItem from "./NotifIcationItem";
 
-export { DesertItem, MenuItem };
+export { DesertItem, MenuItem, NotificationItem };

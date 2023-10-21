@@ -8,7 +8,10 @@ import { DesertItem } from "./components";
 const Deserts = () => {
   return (
     <RootScreen scrollStyle={styles.root}>
-      <PageHeaderWithReturn label="Desserts" />
+      <PageHeaderWithReturn
+        label="Desserts"
+        rootStyle={{ paddingHorizontal: 21 }}
+      />
 
       <View style={styles.inputContaineR}>
         <AppInput placeholder="Search food" isUsedWidth={true} width={"93%"} />

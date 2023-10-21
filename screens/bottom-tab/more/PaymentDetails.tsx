@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { StyleSheet, View } from "react-native";
 import {
   PageHeaderWithReturn,
@@ -8,8 +8,11 @@ import {
 import { AppButton, TextButton } from "../../../components/buttons";
 import { AppText } from "../../../components/texts";
 import { appColors } from "../../../utils";
+import { AddCreditModal } from "../../modals";
 
 const PaymentDetails = () => {
+  const [showModal, setShowModal] = useState<boolean>(false);
+
   return (
     <RootScreen root={styles.root}>
       <PageHeaderWithReturn label="Payment Details" />
@@ -68,7 +71,10 @@ const PaymentDetails = () => {
       </View>
 
       <View style={styles.anotherStyleContainer}>
-        <AppButton btnStyle={styles.btnAnotherStyle}>
+        <AppButton
+          onPress={() => setShowModal(true)}
+          btnStyle={styles.btnAnotherStyle}
+        >
           <WrapIcon
             height={16}
             width={16}
@@ -82,6 +88,8 @@ const PaymentDetails = () => {
           />
         </AppButton>
       </View>
+
+      {showModal && <AddCreditModal onPress={() => setShowModal(false)} />}
     </RootScreen>
   );
 };
@@ -93,7 +101,7 @@ const styles = StyleSheet.create({
   containerStyle: {
     marginTop: 28,
     marginBottom: 20,
-    paddingHorizontal: 21,
+    // paddingHorizontal: 21,
   },
   lblDesc: {
     fontSize: 16,
@@ -112,7 +120,7 @@ const styles = StyleSheet.create({
     elevation: 2,
     paddingVertical: 26,
     alignItems: "center",
-    paddingHorizontal: 45,
+    paddingHorizontal: 23,
     justifyContent: "center",
     backgroundColor: "#F7F7F7",
   },
@@ -140,7 +148,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   cartBottom: { alignSelf: "stretch", marginTop: 13 },
-  anotherStyleContainer: { marginHorizontal: 21, marginTop: 70 },
+  anotherStyleContainer: { marginHorizontal: 21, marginTop: 35 },
   btnAnotherStyle: {
     width: "100%",
     borderWidth: 0,

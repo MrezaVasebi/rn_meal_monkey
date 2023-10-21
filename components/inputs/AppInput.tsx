@@ -31,6 +31,7 @@ const AppInput = (props: TextInputProps & IAppInput) => {
       secureTextEntry={props.secureTextEntry}
       placeholderTextColor={appColors.placeholder}
       style={{ ...styles.style, ...customStyle, ...props.inputStyle }}
+      // style={{ ...styles.style }}
     />
   );
 };

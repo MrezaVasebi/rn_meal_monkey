@@ -20,37 +20,32 @@ const Profile = () => {
     <RootScreen>
       <PageHeader label="Profile" />
 
-      <View
-        style={{
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <View style={styles.avatarStyle}>
-          <WrapIcon iconName="profile" height={"100%"} width={"100%"} />
-        </View>
-
-        <View style={styles.editContainer}>
-          <TextButton
-            label="Edit Profile"
-            lblStyle={{ color: appColors.orange, marginLeft: 10 }}
-          />
-
-          <WrapIcon iconName="edit" height={15} width={15} />
-        </View>
-
-        <AppText
-          label="Hi there Emilia!"
-          lblStyle={{ color: appColors.darkPlus, fontSize: 16 }}
-        />
-
-        <TextButton label="Sign Out" btnStyle={{ marginTop: 5 }} />
-      </View>
-
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{ flexGrow: 1 }}
       >
+        <View style={styles.avatarContainer}>
+          <View style={styles.avatarStyle}>
+            <WrapIcon iconName="profile" height={"100%"} width={"100%"} />
+          </View>
+
+          <View style={styles.editContainer}>
+            <TextButton
+              label="Edit Profile"
+              lblStyle={{ color: appColors.orange, marginLeft: 10 }}
+            />
+
+            <WrapIcon iconName="edit" height={15} width={15} />
+          </View>
+
+          <AppText
+            label="Hi there Emilia!"
+            lblStyle={{ color: appColors.darkPlus, fontSize: 16 }}
+          />
+
+          <TextButton label="Sign Out" btnStyle={{ marginTop: 5 }} />
+        </View>
+
         <View style={{ alignItems: "center", marginTop: 47 }}>
           {data.map((el, index) => {
             return (
@@ -76,6 +71,11 @@ export default Profile;
 
 const styles = StyleSheet.create({
   root: {},
+  avatarContainer: {
+    paddingTop: 10,
+    alignItems: "center",
+    justifyContent: "center",
+  },
   avatarStyle: {
     width: 102,
     height: 102,

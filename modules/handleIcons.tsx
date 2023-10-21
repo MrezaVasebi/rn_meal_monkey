@@ -26,6 +26,9 @@ export function handleIcons(iconName: string) {
     slideTwo: require("../assets/icons/slide_two.png"),
     slideThree: require("../assets/icons/slide_three.png"),
     heart: require("../assets/icons/heart.png"),
+    check: require("../assets/icons/check.png"),
+    visa: require("../assets/icons/visa.png"),
+    add: require("../assets/icons/add.png"),
 
     // img
     food_one: require("../assets/img/food_one.png"),

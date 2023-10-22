@@ -1,3 +1,4 @@
+import InboxItem from "./InboxItem";
 import NotifIcationItem from "./NotifIcationItem";
 
-export { NotifIcationItem };
+export { InboxItem, NotifIcationItem };

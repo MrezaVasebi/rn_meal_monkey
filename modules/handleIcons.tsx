@@ -30,6 +30,7 @@ export function handleIcons(iconName: string) {
     visa: require("../assets/icons/visa.png"),
     add: require("../assets/icons/add.png"),
     close: require("../assets/icons/close.png"),
+    empty_star: require("../assets/icons/empty_star.png"),
 
     // img
     food_one: require("../assets/img/food_one.png"),

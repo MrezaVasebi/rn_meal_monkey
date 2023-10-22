@@ -9,7 +9,14 @@ interface IAppText {
 
 const AppText = (props: TextProps & IAppText) => {
   let { label, lblStyle } = props;
-  return <Text style={{ ...styles.lblStyle, ...lblStyle }}>{label}</Text>;
+  return (
+    <Text
+      numberOfLines={props.numberOfLines}
+      style={{ ...styles.lblStyle, ...lblStyle }}
+    >
+      {label}
+    </Text>
+  );
 };
 
 export default AppText;

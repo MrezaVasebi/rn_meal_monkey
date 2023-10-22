@@ -33,10 +33,10 @@ const DesertDetails = () => {
             />
 
             <View style={styles.scoreStyle}>
-              {[1, 2, 3, 4, 5].map((el) => {
+              {[1, 2, 3, 4, 5].map((el, index) => {
                 return (
                   <WrapIcon
-                    key={el}
+                    key={index}
                     width={15}
                     height={15}
                     iconName="start"
@@ -77,9 +77,10 @@ const DesertDetails = () => {
             {[
               "- Select the size of portion -",
               "- Select the ingredients -",
-            ].map((el) => {
+            ].map((el, index) => {
               return (
                 <TouchableOpacity
+                  key={index}
                   activeOpacity={0.5}
                   style={styles.selectStyle}
                 >

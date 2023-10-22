@@ -39,6 +39,7 @@ export default Menu;
 const styles = StyleSheet.create({
   root: {
     padding: 0,
+    paddingBottom: 15,
   },
   inputContaineR: {
     marginTop: 24,
@@ -49,7 +50,6 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingLeft: 53,
     paddingRight: 21,
-    marginBottom: 100,
   },
   itemContainer: {
     flex: 1,

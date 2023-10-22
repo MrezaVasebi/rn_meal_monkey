@@ -8,13 +8,7 @@ import { appColors } from "../../../../utils";
 const MostPopularCart = ({ item }: { item: most_popular_type }) => {
   return (
     <View style={styles.root}>
-      <View
-        style={{
-          height: 135,
-          borderRadius: 10,
-          overflow: "hidden",
-        }}
-      >
+      <View style={styles.imgContainer}>
         <WrapIcon
           width={"100%"}
           height={"100%"}
@@ -60,5 +54,10 @@ const styles = StyleSheet.create({
   scoreStyle: {
     marginHorizontal: 5,
     color: appColors.orange,
+  },
+  imgContainer: {
+    height: 135,
+    borderRadius: 10,
+    overflow: "hidden",
   },
 });

@@ -16,10 +16,7 @@ const DesertDetails = () => {
         <View
           style={{
             ...styles.cartCircle,
-            position: "absolute",
-            top: -25,
-            right: 20,
-            zIndex: 1,
+            ...styles.heartStyle,
           }}
         >
           <WrapIcon iconName="heart" />
@@ -298,4 +295,5 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     backgroundColor: appColors.white,
   },
+  heartStyle: { position: "absolute", top: -25, right: 20, zIndex: 1 },
 });

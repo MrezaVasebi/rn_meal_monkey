@@ -10,7 +10,7 @@ import { PopularRestaurantCart } from "../home/components";
 const Offers = () => {
   return (
     <RootScreen scrollStyle={styles.root}>
-      <View style={{ paddingHorizontal: 21 }}>
+      <View style={{ paddingHorizontal: 21, marginTop: 20 }}>
         <PageHeader label="Latest Offers" />
 
         <AppText

@@ -17,7 +17,7 @@ const PaymentDetails = () => {
     <RootScreen scrollStyle={{ padding: 0 }}>
       <PageHeaderWithReturn
         label="Payment Details"
-        rootStyle={{ paddingHorizontal: 21 }}
+        rootStyle={{ paddingHorizontal: 21, marginTop: 20 }}
       />
 
       <View style={styles.containerStyle}>

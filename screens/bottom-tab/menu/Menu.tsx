@@ -9,7 +9,10 @@ import { MenuItem } from "./components";
 const Menu = () => {
   return (
     <RootScreen scrollStyle={styles.root}>
-      <PageHeader label="Menu" rootStyle={{ marginHorizontal: 21 }} />
+      <PageHeader
+        label="Menu"
+        rootStyle={{ marginHorizontal: 21, marginTop: 20 }}
+      />
 
       <View style={styles.inputContaineR}>
         <AppInput placeholder="Search food" isUsedWidth={true} width={"93%"} />

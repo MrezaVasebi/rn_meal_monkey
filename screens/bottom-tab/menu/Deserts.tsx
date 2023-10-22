@@ -10,7 +10,7 @@ const Deserts = () => {
     <RootScreen scrollStyle={styles.root}>
       <PageHeaderWithReturn
         label="Desserts"
-        rootStyle={{ paddingHorizontal: 21 }}
+        rootStyle={{ paddingHorizontal: 21, marginTop: 20 }}
       />
 
       <View style={styles.inputContaineR}>

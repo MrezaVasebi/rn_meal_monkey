@@ -23,7 +23,7 @@ const Home = () => {
     <RootScreen scrollStyle={styles.root}>
       <PageHeader
         label="Good morning Mreza!"
-        rootStyle={{ marginHorizontal: 21 }}
+        rootStyle={{ marginHorizontal: 21, marginTop: 20 }}
       />
 
       <View style={{ marginVertical: 34, paddingLeft: 21 }}>

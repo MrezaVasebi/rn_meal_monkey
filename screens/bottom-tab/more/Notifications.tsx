@@ -1,7 +1,7 @@
 import React from "react";
 import { View } from "react-native";
 import { PageHeaderWithReturn, RootScreen } from "../../../components";
-import { NotificationItem } from "./components";
+import { NotifIcationItem } from "./components";
 
 const Notifications = () => {
   let data = [
@@ -20,11 +20,14 @@ const Notifications = () => {
   ];
   return (
     <RootScreen scrollStyle={{ paddingTop: 0 }}>
-      <PageHeaderWithReturn label="Notifications" />
+      <PageHeaderWithReturn
+        label="Notifications"
+        rootStyle={{ marginTop: 20 }}
+      />
 
       <View style={{ marginTop: 32 }}>
         {data.map((el, index) => {
-          return <NotificationItem item={el} key={index} />;
+          return <NotifIcationItem item={el} key={index} />;
         })}
       </View>
     </RootScreen>

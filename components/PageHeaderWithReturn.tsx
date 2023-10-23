@@ -7,9 +7,11 @@ import { AppText } from "./texts";
 const PageHeaderWithReturn = ({
   label,
   rootStyle,
+  isShowCart = true,
 }: {
   label: string;
   rootStyle?: object;
+  isShowCart?: boolean;
 }) => {
   return (
     <View style={{ ...styles.headerContainer, ...rootStyle }}>
@@ -27,9 +29,11 @@ const PageHeaderWithReturn = ({
         </TouchableOpacity>
       </View>
 
-      <TouchableOpacity>
-        <WrapIcon iconName="cart" />
-      </TouchableOpacity>
+      {isShowCart && (
+        <TouchableOpacity>
+          <WrapIcon iconName="cart" />
+        </TouchableOpacity>
+      )}
     </View>
   );
 };

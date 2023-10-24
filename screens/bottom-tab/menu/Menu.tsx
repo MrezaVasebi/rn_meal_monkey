@@ -1,3 +1,5 @@
+import { ParamListBase, useNavigation } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import React from "react";
 import { StyleSheet, View } from "react-native";
 import { PageHeader, RootScreen } from "../../../components";
@@ -7,6 +9,8 @@ import { appColors } from "../../../utils";
 import { MenuItem } from "./components";
 
 const Menu = () => {
+  const nav = useNavigation<NativeStackNavigationProp<ParamListBase>>();
+
   return (
     <RootScreen scrollStyle={styles.root}>
       <PageHeader

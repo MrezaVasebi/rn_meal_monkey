@@ -1,3 +1,5 @@
+import { ParamListBase, useNavigation } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import React from "react";
 import { ScrollView, StyleSheet, View } from "react-native";
 import { PageHeaderWithReturn, RootScreen } from "../../../components";
@@ -6,10 +8,13 @@ import { desert_item } from "../../../constant/desert_item";
 import { DesertItem } from "./components";
 
 const Deserts = () => {
+  const nav = useNavigation<NativeStackNavigationProp<ParamListBase>>();
+
   return (
     <RootScreen scrollStyle={styles.root}>
       <PageHeaderWithReturn
         label="Desserts"
+        onPress={() => nav.goBack()}
         rootStyle={{ paddingHorizontal: 21, marginTop: 20 }}
       />
 

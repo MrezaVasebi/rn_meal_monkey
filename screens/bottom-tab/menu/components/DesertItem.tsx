@@ -1,13 +1,21 @@
+import { ParamListBase, useNavigation } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, TouchableOpacity, View } from "react-native";
 import { WrapIcon } from "../../../../components";
 import { AppText } from "../../../../components/texts";
 import { desert_item_type } from "../../../../types/";
 import { appColors } from "../../../../utils";
 
 const DesertItem = ({ item }: { item: desert_item_type }) => {
+  const nav = useNavigation<NativeStackNavigationProp<ParamListBase>>();
+
   return (
-    <View style={styles.root}>
+    <TouchableOpacity
+      activeOpacity={0.5}
+      onPress={() => nav.navigate("DesertDetails")}
+      style={styles.root}
+    >
       <WrapIcon iconName={item.image} height={"100%"} width={"100%"} />
 
       <View style={styles.body}>
@@ -21,7 +29,7 @@ const DesertItem = ({ item }: { item: desert_item_type }) => {
           <AppText label={item.desc} lblStyle={styles.lblDesc} />
         </View>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 

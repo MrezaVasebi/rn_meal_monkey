@@ -1,3 +1,5 @@
+import { ParamListBase, useNavigation } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import React from "react";
 import { StyleSheet, TouchableOpacity, View } from "react-native";
 import { WrapIcon } from "../../../../components";
@@ -14,6 +16,8 @@ const MenuItem = ({
   imgStyle?: object;
   item: menu_item_type;
 }) => {
+  const nav = useNavigation<NativeStackNavigationProp<ParamListBase>>();
+
   const handleShapeStyle = () => {
     switch (item.shapeName) {
       case "square":
@@ -33,6 +37,11 @@ const MenuItem = ({
 
   return (
     <TouchableOpacity
+      onPress={() => {
+        if (item.foodName === "Deserts") {
+          nav.navigate("Deserts");
+        }
+      }}
       activeOpacity={0.5}
       style={{ ...styles.root, ...rootStyle }}
     >

@@ -7,9 +7,11 @@ import { AppText } from "./texts";
 const PageHeaderWithReturn = ({
   label,
   rootStyle,
+  onPress,
   isShowCart = true,
 }: {
   label: string;
+  onPress: () => void;
   rootStyle?: object;
   isShowCart?: boolean;
 }) => {
@@ -18,7 +20,7 @@ const PageHeaderWithReturn = ({
       <View style={styles.returnStyle}>
         <AppText label={label} lblStyle={styles.lblTitle} />
 
-        <TouchableOpacity activeOpacity={0.5}>
+        <TouchableOpacity activeOpacity={0.5} onPress={onPress}>
           <WrapIcon
             width={15}
             height={15}

@@ -1,3 +1,5 @@
+import { ParamListBase, useNavigation } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import React from "react";
 import { StyleSheet } from "react-native";
 import { RootScreen } from "../../components";
@@ -7,6 +9,8 @@ import { appColors } from "../../utils";
 import { Headers } from "./components";
 
 const ResetPassword = () => {
+  const nav = useNavigation<NativeStackNavigationProp<ParamListBase>>();
+
   return (
     <RootScreen root={styles.root}>
       <Headers
@@ -14,9 +18,13 @@ const ResetPassword = () => {
         subTitle="Please enter your email to receive a link to  create a new password via email"
       />
 
-      <AppInput placeholder="Email" />
+      <AppInput placeholder="Email" isUsedWidth={true} />
 
-      <FillButton label="Send" btnStyle={styles.btnSendStyle} />
+      <FillButton
+        label="Send"
+        btnStyle={styles.btnSendStyle}
+        onPress={() => nav.navigate("OtpCode")}
+      />
     </RootScreen>
   );
 };
@@ -30,6 +38,7 @@ const styles = StyleSheet.create({
   btnSendStyle: {
     borderWidth: 0,
     marginTop: 24,
+    width: "100%",
     backgroundColor: appColors.orange,
   },
 });

@@ -1,3 +1,5 @@
+import { ParamListBase, useNavigation } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import React from "react";
 import { StyleSheet, View } from "react-native";
 import { RootScreen } from "../../components";
@@ -8,6 +10,8 @@ import { appColors } from "../../utils";
 import { Headers } from "./components";
 
 const OtpCode = () => {
+  const nav = useNavigation<NativeStackNavigationProp<ParamListBase>>();
+
   return (
     <RootScreen>
       <Headers
@@ -15,9 +19,13 @@ const OtpCode = () => {
         subTitle="Please check your mobile number 071*****12 continue to reset your password"
       />
 
-      <AppInput placeholder="OTP" />
+      <AppInput isUsedWidth={true} placeholder="OTP" />
 
-      <FillButton label="Next" btnStyle={styles.btnNextStyle} />
+      <FillButton
+        onPress={() => nav.navigate("NewPassword")}
+        label="Next"
+        btnStyle={styles.btnNextStyle}
+      />
 
       <View style={styles.clickHereStyle}>
         <AppText label="Didn't Receive? " />
@@ -34,6 +42,7 @@ const styles = StyleSheet.create({
   btnNextStyle: {
     borderWidth: 0,
     marginTop: 24,
+    width: "100%",
     backgroundColor: appColors.orange,
   },
   clickHereStyle: {

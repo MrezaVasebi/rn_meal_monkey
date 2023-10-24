@@ -1,3 +1,5 @@
+import { ParamListBase, useNavigation } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import React from "react";
 import { StyleSheet, View } from "react-native";
 import { RootScreen } from "../../components";
@@ -8,6 +10,8 @@ import { appColors } from "../../utils";
 import { Headers } from "./components";
 
 const SignUp = () => {
+  const nav = useNavigation<NativeStackNavigationProp<ParamListBase>>();
+
   return (
     <RootScreen scrollStyle={styles.scrollStyle}>
       <Headers title="Sign Up" subTitle="Add your details to sign up" />
@@ -33,7 +37,11 @@ const SignUp = () => {
       <View style={styles.loginStyle}>
         <AppText label="Already have an Account? " />
 
-        <TextButton label="Login" lblStyle={{ color: appColors.orange }} />
+        <TextButton
+          label="Login"
+          lblStyle={{ color: appColors.orange }}
+          onPress={() => nav.navigate("Login")}
+        />
       </View>
     </RootScreen>
   );

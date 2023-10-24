@@ -1,3 +1,5 @@
+import { ParamListBase, useNavigation } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import React from "react";
 import { StyleSheet } from "react-native";
 import { RootScreen } from "../../components";
@@ -7,6 +9,8 @@ import { appColors } from "../../utils";
 import { Headers } from "./components";
 
 const NewPassword = () => {
+  const nav = useNavigation<NativeStackNavigationProp<ParamListBase>>();
+
   return (
     <RootScreen scrollStyle={styles.root}>
       <Headers
@@ -14,11 +18,19 @@ const NewPassword = () => {
         subTitle="Please enter your email to receive a link to  create a new password via email"
       />
 
-      <AppInput placeholder="New Password" />
+      <AppInput isUsedWidth={false} placeholder="New Password" />
 
-      <AppInput placeholder="Confirm Password" inputStyle={{ marginTop: 28 }} />
+      <AppInput
+        isUsedWidth={false}
+        placeholder="Confirm Password"
+        inputStyle={{ marginTop: 28 }}
+      />
 
-      <FillButton label="Next" btnStyle={styles.btnNextStyle} />
+      <FillButton
+        label="Next"
+        btnStyle={styles.btnNextStyle}
+        onPress={() => nav.navigate("SwapList")}
+      />
     </RootScreen>
   );
 };

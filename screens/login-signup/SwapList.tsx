@@ -1,3 +1,5 @@
+import { ParamListBase, useNavigation } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import React, { useRef, useState } from "react";
 import { Dimensions, ScrollView, StyleSheet, View } from "react-native";
 import { RootScreen, WrapIcon } from "../../components";
@@ -8,6 +10,8 @@ import { AppPadding, appColors } from "../../utils";
 let { width } = Dimensions.get("window");
 
 const SwapList = () => {
+  const nav = useNavigation<NativeStackNavigationProp<ParamListBase>>();
+
   let scrollRef: React.MutableRefObject<null> = useRef(null);
 
   let data = [
@@ -35,14 +39,16 @@ const SwapList = () => {
   }
 
   function handleOnPressNext() {
-    if (currentIndex === data.length - 1) return;
+    if (currentIndex === data.length - 1) {
+      nav.navigate("BottomNav");
+    } else {
+      scrollRef?.current?.scrollTo({
+        x: width * (currentIndex + 1),
+        animated: true,
+      });
 
-    scrollRef?.current?.scrollTo({
-      x: width * (currentIndex + 1),
-      animated: true,
-    });
-
-    setCurrentIndex((pre) => pre + 1);
+      setCurrentIndex((pre) => pre + 1);
+    }
   }
 
   return (

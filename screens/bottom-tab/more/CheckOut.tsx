@@ -14,7 +14,7 @@ const CheckOut = () => {
   const [showModal, setShowModal] = useState<boolean>(false);
 
   return (
-    <RootScreen scrollStyle={{ padding: 0 }}>
+    <RootScreen scrollStyle={{ padding: 0, paddingBottom: 15 }}>
       <PageHeaderWithReturn
         label="CheckOut"
         isShowCart={false}
@@ -95,7 +95,7 @@ const CheckOut = () => {
           { lbl: "Discount", price: "-$4" },
         ].map((el, index) => {
           return (
-            <View style={styles.itemStyle}>
+            <View key={index} style={styles.itemStyle}>
               <AppText label={el.lbl} />
 
               <AppText label={el.price} lblStyle={styles.lblAddress} />

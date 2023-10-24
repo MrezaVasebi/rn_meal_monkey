@@ -14,7 +14,6 @@ const Deserts = () => {
     <RootScreen scrollStyle={styles.root}>
       <PageHeaderWithReturn
         label="Desserts"
-        onPress={() => nav.goBack()}
         rootStyle={{ paddingHorizontal: 21, marginTop: 20 }}
       />
 

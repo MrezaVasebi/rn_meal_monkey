@@ -3,7 +3,7 @@ import { WrapIcon } from "../../components";
 import { appColors } from "../../utils";
 import { Home } from "./home";
 import { MenuNav } from "./menu";
-import { More } from "./more";
+import { More, MoreNav } from "./more";
 import { Offers } from "./offers";
 import { Profile } from "./profile";
 
@@ -88,7 +88,7 @@ export function BottomNav() {
       />
       <Tab.Screen
         name="More"
-        component={More}
+        component={MoreNav}
         options={{
           tabBarIcon: ({ focused }) => {
             return (

@@ -9,8 +9,12 @@ import { FillButton } from "../../../components/buttons";
 import { AppText } from "../../../components/texts";
 import { my_order_data } from "../../../constant";
 import { AppPadding, appColors } from "../../../utils";
+import { ParamListBase, useNavigation } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 
 const MyOrder = () => {
+  const nav = useNavigation<NativeStackNavigationProp<ParamListBase>>();
+
   return (
     <RootScreen scrollStyle={{ padding: 0 }}>
       <PageHeaderWithReturn
@@ -127,7 +131,11 @@ const MyOrder = () => {
           />
         </View>
 
-        <FillButton label="Checkout" btnStyle={styles.checkStyle} />
+        <FillButton
+          label="Checkout"
+          btnStyle={styles.checkStyle}
+          onPress={() => nav.navigate("CheckOut")}
+        />
       </View>
     </RootScreen>
   );

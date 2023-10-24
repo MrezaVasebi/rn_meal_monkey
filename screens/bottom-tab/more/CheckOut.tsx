@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { StyleSheet, TouchableOpacity, View } from "react-native";
 import {
   PageHeaderWithReturn,
@@ -8,8 +8,11 @@ import {
 import { FillButton, TextButton } from "../../../components/buttons";
 import { AppText } from "../../../components/texts";
 import { AppPadding, appColors } from "../../../utils";
+import OrderModal from "../../modals/OrderModal";
 
 const CheckOut = () => {
+  const [showModal, setShowModal] = useState<boolean>(false);
+
   return (
     <RootScreen scrollStyle={{ padding: 0 }}>
       <PageHeaderWithReturn
@@ -112,8 +115,14 @@ const CheckOut = () => {
       <View style={styles.line} />
 
       <View style={{ paddingHorizontal: AppPadding.l }}>
-        <FillButton label="Send Order" btnStyle={styles.sendStyle} />
+        <FillButton
+          label="Send Order"
+          btnStyle={styles.sendStyle}
+          onPress={() => setShowModal(true)}
+        />
       </View>
+
+      {showModal && <OrderModal onPress={() => setShowModal(false)} />}
     </RootScreen>
   );
 };

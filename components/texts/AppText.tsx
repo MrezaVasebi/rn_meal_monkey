@@ -3,7 +3,7 @@ import { StyleSheet, Text, TextProps } from "react-native";
 import { appColors } from "../../utils";
 
 interface IAppText {
-  label: string;
+  label?: string;
   lblStyle?: object;
 }
 

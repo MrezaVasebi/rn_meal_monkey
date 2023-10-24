@@ -33,6 +33,7 @@ export function handleIcons(iconName: string) {
     empty_star: require("../assets/icons/empty_star.png"),
     location: require("../assets/icons/location-pin.png"),
     paypal: require("../assets/icons/paypal.png"),
+    order: require("../assets/icons/order.png"),
 
     // img
     food_one: require("../assets/img/food_one.png"),

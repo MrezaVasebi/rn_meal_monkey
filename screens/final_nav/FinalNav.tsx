@@ -8,7 +8,7 @@ import { LoginNav } from "../login-signup";
 
 const Stack = createNativeStackNavigator();
 
-function App() {
+function FinalNav() {
   return (
     <NavigationContainer>
       <Stack.Navigator
@@ -23,4 +23,4 @@ function App() {
   );
 }
 
-export default App;
+export default FinalNav;

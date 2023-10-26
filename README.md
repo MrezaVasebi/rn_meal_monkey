@@ -15,17 +15,11 @@ This is only UI-UX online meal food delivery project which does not have Backend
 
 ### Screen Shots
 
-<!-- ![Capture1](https://github.com/MrezaVasebi/meal_monkey/assets/53302880/1e5aa53b-97f3-4f96-8ac8-ebaf7d63b404)
+|                                                   Profile                                                   |                                                Desert Details                                                |
+| :---------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------: |
+| ![profile](https://github.com/MrezaVasebi/meal_monkey/assets/53302880/36af65d2-72ce-4d9b-b349-5c8bfba50804) | ![Capture2](https://github.com/MrezaVasebi/meal_monkey/assets/53302880/ffc57e84-f87d-4f61-8ab7-58d0fed37d83) |
 
-![Capture2](https://github.com/MrezaVasebi/meal_monkey/assets/53302880/c79ec08d-3737-43f6-b2c7-aa172f64bf86)
-
-![Capture3](https://github.com/MrezaVasebi/meal_monkey/assets/53302880/48b9edfc-5196-40db-9a55-7da507438c38) -->
-
-| menu                                                                                                         | desert details                                                                                               |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| ![Capture2](https://github.com/MrezaVasebi/meal_monkey/assets/53302880/c79ec08d-3737-43f6-b2c7-aa172f64bf86) | ![Capture3](https://github.com/MrezaVasebi/meal_monkey/assets/53302880/48b9edfc-5196-40db-9a55-7da507438c38) |
-
-![Capture1](https://github.com/MrezaVasebi/meal_monkey/assets/53302880/1e5aa53b-97f3-4f96-8ac8-ebaf7d63b404)
+![1Capture](https://github.com/MrezaVasebi/meal_monkey/assets/53302880/6ed56fff-db85-4dc9-ba98-2f9c23d4f5fe)
 
 ### Installation
 

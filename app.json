@@ -1,5 +1,6 @@
 {
   "expo": {
+    "owner": "mrezarn",
     "name": "meal_monkey",
     "slug": "meal_monkey",
     "version": "1.0.0",
@@ -21,10 +22,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.mrezarn.meal_monkey"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "3c00c2f4-1543-4b0b-93fd-9fb530a32774"
+      }
     }
   }
 }

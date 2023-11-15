@@ -67,24 +67,6 @@ const SwapList = () => {
               <View key={index} style={styles.itemStyle}>
                 <WrapIcon height={300} width={300} iconName={el.image} />
 
-                <View style={styles.dotContainer}>
-                  {data.map((ele, indexPlus) => {
-                    return (
-                      <View
-                        key={indexPlus}
-                        style={{
-                          ...styles.dotStyle,
-                          backgroundColor:
-                            index === indexPlus
-                              ? appColors.orange
-                              : appColors.grey,
-                          marginRight: data.length - 1 === indexPlus ? 0 : 10,
-                        }}
-                      />
-                    );
-                  })}
-                </View>
-
                 <AppText lblStyle={styles.lblTitleStyle} label={el.title} />
 
                 <AppText label={el.desc} lblStyle={styles.lblDescStyle} />
@@ -94,9 +76,27 @@ const SwapList = () => {
         </ScrollView>
       </View>
 
+      <View style={styles.dotContainer}>
+        {data.map((ele, indexPlus) => {
+          return (
+            <View
+              key={indexPlus}
+              style={{
+                ...styles.dotStyle,
+                backgroundColor:
+                  currentIndex === indexPlus
+                    ? appColors.orange
+                    : appColors.grey,
+                marginRight: data.length - 1 === indexPlus ? 0 : 10,
+              }}
+            />
+          );
+        })}
+      </View>
+
       <View style={styles.btnContainer}>
         <FillButton
-          label="Next"
+          label={currentIndex === data.length - 1 ? `Let's go` : "Next"}
           btnStyle={styles.btnStyle}
           onPress={handleOnPressNext}
         />
@@ -139,6 +139,9 @@ const styles = StyleSheet.create({
   },
   dotContainer: {
     marginTop: 15,
+    bottom: "45%",
+    left: width / 2,
+    position: "absolute",
     flexDirection: "row",
   },
   dotStyle: {

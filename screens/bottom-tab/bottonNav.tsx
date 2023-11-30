@@ -3,7 +3,7 @@ import { WrapIcon } from "../../components";
 import { appColors } from "../../utils";
 import { Home } from "./home";
 import { MenuNav } from "./menu";
-import { More, MoreNav } from "./more";
+import { MoreNav } from "./more";
 import { Offers } from "./offers";
 import { Profile } from "./profile";
 

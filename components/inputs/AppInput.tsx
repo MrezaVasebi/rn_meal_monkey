@@ -41,6 +41,7 @@ export default AppInput;
 const styles = StyleSheet.create({
   style: {
     height: 56,
+    fontFamily: "medium",
     paddingLeft: AppPadding.l,
     borderRadius: AppRadius.xl,
     backgroundColor: appColors.fillInput,

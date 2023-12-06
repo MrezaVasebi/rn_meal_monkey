@@ -23,6 +23,7 @@ export default AppText;
 
 const styles = StyleSheet.create({
   lblStyle: {
+    fontFamily: "medium",
     color: appColors.darkGrey,
   },
 });

@@ -15,7 +15,12 @@ const LoginOrSignup = () => {
   return (
     <RootScreen>
       <View style={{ alignItems: "center" }}>
-        <WrapIcon width={width} iconName="back" height={350} />
+        <WrapIcon
+          height={350}
+          width={width}
+          iconName="back"
+          style={{ resizeMode: "cover" }}
+        />
       </View>
 
       <View style={{}}>

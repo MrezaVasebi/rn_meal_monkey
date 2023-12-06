@@ -19,7 +19,7 @@ const WrapIcon = (props: IWrapIcon) => {
       style={{
         width,
         height,
-        resizeMode: "cover",
+        resizeMode: "contain",
         ...props.style,
       }}
     />

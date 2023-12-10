@@ -39,16 +39,14 @@ const SwapList = () => {
   }
 
   function handleOnPressNext() {
-    if (currentIndex === data.length - 1) {
-      nav.navigate("BottomNav");
-    } else {
-      scrollRef?.current?.scrollTo({
-        x: width * (currentIndex + 1),
-        animated: true,
-      });
+    if (currentIndex === data.length - 1) return;
 
-      setCurrentIndex((pre) => pre + 1);
-    }
+    scrollRef?.current?.scrollTo({
+      x: Dimensions.get("window").width * (currentIndex + 1),
+      animated: true,
+    });
+
+    setCurrentIndex((pre) => pre + 1);
   }
 
   return (
@@ -67,6 +65,24 @@ const SwapList = () => {
               <View key={index} style={styles.itemStyle}>
                 <WrapIcon height={300} width={300} iconName={el.image} />
 
+                <View style={styles.dotContainer}>
+                  {data.map((ele, indexPlus) => {
+                    return (
+                      <View
+                        key={indexPlus}
+                        style={{
+                          ...styles.dotStyle,
+                          backgroundColor:
+                            index === indexPlus
+                              ? appColors.orange
+                              : appColors.grey,
+                          marginRight: data.length - 1 === indexPlus ? 0 : 10,
+                        }}
+                      />
+                    );
+                  })}
+                </View>
+
                 <AppText lblStyle={styles.lblTitleStyle} label={el.title} />
 
                 <AppText label={el.desc} lblStyle={styles.lblDescStyle} />
@@ -74,24 +90,6 @@ const SwapList = () => {
             );
           })}
         </ScrollView>
-      </View>
-
-      <View style={styles.dotContainer}>
-        {data.map((ele, indexPlus) => {
-          return (
-            <View
-              key={indexPlus}
-              style={{
-                ...styles.dotStyle,
-                backgroundColor:
-                  currentIndex === indexPlus
-                    ? appColors.orange
-                    : appColors.grey,
-                marginRight: data.length - 1 === indexPlus ? 0 : 10,
-              }}
-            />
-          );
-        })}
       </View>
 
       <View style={styles.btnContainer}>
@@ -109,14 +107,14 @@ export default SwapList;
 
 const styles = StyleSheet.create({
   root: {
+    flex: 1,
     padding: 0,
-    paddingBottom: 10,
   },
   itemStyle: {
-    width: width,
     marginTop: 100,
     alignItems: "center",
     padding: AppPadding.xl,
+    width: Dimensions.get("window").width,
   },
   lblTitleStyle: {
     fontSize: 28,
@@ -139,9 +137,6 @@ const styles = StyleSheet.create({
   },
   dotContainer: {
     marginTop: 15,
-    bottom: "45%",
-    left: width / 2,
-    position: "absolute",
     flexDirection: "row",
   },
   dotStyle: {

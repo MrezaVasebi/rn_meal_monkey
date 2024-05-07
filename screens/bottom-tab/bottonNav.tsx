@@ -10,6 +10,23 @@ import { Profile } from "./profile";
 const Tab = createBottomTabNavigator();
 
 export function BottomNav() {
+  const CustomTab = ({
+    iconName,
+    focused,
+  }: {
+    iconName: string;
+    focused: boolean;
+  }) => {
+    return (
+      <WrapIcon
+        width={15}
+        height={15}
+        iconName={iconName}
+        tintColor={focused ? appColors.orange : appColors.darkGrey}
+      />
+    );
+  };
+
   return (
     <Tab.Navigator
       screenOptions={{
@@ -26,80 +43,45 @@ export function BottomNav() {
         name="Menu"
         component={MenuNav}
         options={{
-          tabBarIcon: ({ focused }) => {
-            return (
-              <WrapIcon
-                iconName="menu"
-                height={15}
-                width={15}
-                tintColor={focused ? appColors.orange : appColors.darkGrey}
-              />
-            );
-          },
+          tabBarIcon: ({ focused }) => (
+            <CustomTab iconName="menu" focused={focused} />
+          ),
         }}
       />
       <Tab.Screen
         name="Offers"
         component={Offers}
         options={{
-          tabBarIcon: ({ focused }) => {
-            return (
-              <WrapIcon
-                iconName="bag"
-                height={15}
-                width={15}
-                tintColor={focused ? appColors.orange : appColors.darkGrey}
-              />
-            );
-          },
+          tabBarIcon: ({ focused }) => (
+            <CustomTab iconName="bag" focused={focused} />
+          ),
         }}
       />
       <Tab.Screen
         name="Home"
         component={Home}
         options={{
-          tabBarIcon: ({ focused }) => {
-            return (
-              <WrapIcon
-                iconName="home"
-                height={15}
-                width={15}
-                tintColor={focused ? appColors.orange : appColors.darkGrey}
-              />
-            );
-          },
+          tabBarIcon: ({ focused }) => (
+            <CustomTab iconName="home" focused={focused} />
+          ),
         }}
       />
       <Tab.Screen
         name="Profile"
         component={Profile}
         options={{
-          tabBarIcon: ({ focused }) => {
-            return (
-              <WrapIcon
-                iconName="user"
-                height={15}
-                width={15}
-                tintColor={focused ? appColors.orange : appColors.darkGrey}
-              />
-            );
-          },
+          tabBarIcon: ({ focused }) => (
+            <CustomTab iconName="user" focused={focused} />
+          ),
         }}
       />
       <Tab.Screen
         name="More"
         component={MoreNav}
         options={{
-          tabBarIcon: ({ focused }) => {
-            return (
-              <WrapIcon
-                iconName="more"
-                height={15}
-                width={15}
-                tintColor={focused ? appColors.orange : appColors.darkGrey}
-              />
-            );
-          },
+          tabBarIcon: ({ focused }) => (
+            <CustomTab iconName="more" focused={focused} />
+          ),
         }}
       />
     </Tab.Navigator>

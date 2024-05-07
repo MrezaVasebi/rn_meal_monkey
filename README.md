@@ -11,15 +11,13 @@ This is only UI-UX online meal food delivery project which does not have Backend
 
 ### Packages in used
 
-- [React Navigation](https://reactnavigation.org/)
+- [React Navigation](https://reactnavigation.org/) to navigate between components
 
 ### Screen Shots
 
-|                                                   Profile                                                   |                                                Desert Details                                                |
-| :---------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------: |
-| ![profile](https://github.com/MrezaVasebi/meal_monkey/assets/53302880/36af65d2-72ce-4d9b-b349-5c8bfba50804) | ![Capture2](https://github.com/MrezaVasebi/meal_monkey/assets/53302880/ffc57e84-f87d-4f61-8ab7-58d0fed37d83) |
-
-![1Capture](https://github.com/MrezaVasebi/meal_monkey/assets/53302880/6ed56fff-db85-4dc9-ba98-2f9c23d4f5fe)
+|                                                      Desert details                                                       |                                                           Home                                                            |                                                         My order                                                          |
+| :-----------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------: |
+| ![Screenshot_1715092553](https://github.com/MrezaVasebi/meal_monkey/assets/53302880/6ca8a346-9324-4e1e-8b3b-a0c371f4ec9f) | ![Screenshot_1715092570](https://github.com/MrezaVasebi/meal_monkey/assets/53302880/c4bbf693-d45f-4a75-808e-5187d63c9c5f) | ![Screenshot_1715092661](https://github.com/MrezaVasebi/meal_monkey/assets/53302880/aa6122e7-0589-4f50-8939-5dd59f57e3ff) |
 
 ### Installation
 

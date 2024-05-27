@@ -18,12 +18,16 @@ const NewPassword = () => {
         subTitle="Please enter your email to receive a link to  create a new password via email"
       />
 
-      <AppInput isUsedWidth={false} placeholder="New Password" />
+      <AppInput
+        isUsedWidth={false}
+        placeholder="New Password"
+        inputStyle={{ width: "100%" }}
+      />
 
       <AppInput
         isUsedWidth={false}
         placeholder="Confirm Password"
-        inputStyle={{ marginTop: 28 }}
+        inputStyle={{ marginTop: 28, width: "100%" }}
       />
 
       <FillButton
@@ -42,6 +46,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   btnNextStyle: {
+    width: "100%",
     marginTop: 28,
     borderWidth: 0,
     backgroundColor: appColors.orange,

@@ -1,6 +1,6 @@
 import { ParamListBase, useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Dimensions, ScrollView, StyleSheet, View } from "react-native";
 import { RootScreen, WrapIcon } from "../../components";
 import { FillButton } from "../../components/buttons";
@@ -12,7 +12,7 @@ let { width } = Dimensions.get("window");
 const SwapList = () => {
   const nav = useNavigation<NativeStackNavigationProp<ParamListBase>>();
 
-  let scrollRef: React.MutableRefObject<null> = useRef(null);
+  let scrollRef = useRef<ScrollView>(null);
 
   let data = [
     {
@@ -41,13 +41,23 @@ const SwapList = () => {
   function handleOnPressNext() {
     if (currentIndex === data.length - 1) return;
 
-    scrollRef?.current?.scrollTo({
+    scrollRef.current?.scrollTo({
       x: Dimensions.get("window").width * (currentIndex + 1),
       animated: true,
     });
 
     setCurrentIndex((pre) => pre + 1);
+
+    if (currentIndex === 2) nav.navigate("BottomNav");
   }
+
+  useEffect(() => {
+    if (currentIndex === 2) {
+      setTimeout(() => {
+        nav.navigate("BottomNav");
+      }, 1000);
+    }
+  }, [currentIndex]);
 
   return (
     <RootScreen scrollStyle={styles.root}>
@@ -94,9 +104,9 @@ const SwapList = () => {
 
       <View style={styles.btnContainer}>
         <FillButton
-          label={currentIndex === data.length - 1 ? `Let's go` : "Next"}
           btnStyle={styles.btnStyle}
           onPress={handleOnPressNext}
+          label={currentIndex === data.length - 1 ? `Let's go` : "Next"}
         />
       </View>
     </RootScreen>
